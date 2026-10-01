@@ -6,6 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E6B0024C306DF24C00397EFF /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6B0024B306DF24C00397EFF /* WidgetKit.framework */; };
+		E6B0024E306DF24C00397EFF /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6B0024D306DF24C00397EFF /* SwiftUI.framework */; };
+		E6B00259306DF24D00397EFF /* LeanPawsWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E6B00249306DF24C00397EFF /* LeanPawsWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E6B00265306DF29700397EFF /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6B00264306DF29700397EFF /* UserNotifications.framework */; };
+		E6B00267306DF29700397EFF /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6B00266306DF29700397EFF /* UserNotificationsUI.framework */; };
+		E6B00271306DF29700397EFF /* LeanPawsNotification.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = E6B00263306DF29700397EFF /* LeanPawsNotification.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		E6B00205306DF03B00397EFF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,13 +30,66 @@
 			remoteGlobalIDString = E6B001F6306DF03A00397EFF;
 			remoteInfo = LeanPaws;
 		};
+		E6B00257306DF24D00397EFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6B001EF306DF03A00397EFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6B00248306DF24C00397EFF;
+			remoteInfo = LeanPawsWidgetExtension;
+		};
+		E6B0026F306DF29700397EFF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6B001EF306DF03A00397EFF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6B00262306DF29700397EFF;
+			remoteInfo = LeanPawsNotification;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E6B0025A306DF24D00397EFF /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E6B00271306DF29700397EFF /* LeanPawsNotification.appex in Embed Foundation Extensions */,
+				E6B00259306DF24D00397EFF /* LeanPawsWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E6B001F7306DF03A00397EFF /* LeanPaws.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeanPaws.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6B00204306DF03B00397EFF /* LeanPawsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeanPawsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6B0020E306DF03B00397EFF /* LeanPawsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeanPawsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6B00249306DF24C00397EFF /* LeanPawsWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LeanPawsWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6B0024B306DF24C00397EFF /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		E6B0024D306DF24C00397EFF /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		E6B00263306DF29700397EFF /* LeanPawsNotification.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LeanPawsNotification.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6B00264306DF29700397EFF /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		E6B00266306DF29700397EFF /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		E6B00277306DF43C00397EFF /* LeanPawsWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LeanPawsWidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E6B0025D306DF24D00397EFF /* Exceptions for "LeanPawsWidget" folder in "LeanPawsWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = E6B00248306DF24C00397EFF /* LeanPawsWidgetExtension */;
+		};
+		E6B00272306DF29700397EFF /* Exceptions for "LeanPawsNotification" folder in "LeanPawsNotification" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = E6B00262306DF29700397EFF /* LeanPawsNotification */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		E6B001F9306DF03A00397EFF /* LeanPaws */ = {
@@ -43,6 +105,27 @@
 		E6B00211306DF03B00397EFF /* LeanPawsUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = LeanPawsUITests;
+			sourceTree = "<group>";
+		};
+		E6B0024F306DF24C00397EFF /* LeanPawsWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E6B0025D306DF24D00397EFF /* Exceptions for "LeanPawsWidget" folder in "LeanPawsWidgetExtension" target */,
+			);
+			path = LeanPawsWidget;
+			sourceTree = "<group>";
+		};
+		E6B00268306DF29700397EFF /* LeanPawsNotification */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				E6B00272306DF29700397EFF /* Exceptions for "LeanPawsNotification" folder in "LeanPawsNotification" target */,
+			);
+			path = LeanPawsNotification;
+			sourceTree = "<group>";
+		};
+		E6B00279306DF4E800397EFF /* Shared */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -69,15 +152,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E6B00246306DF24C00397EFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6B0024E306DF24C00397EFF /* SwiftUI.framework in Frameworks */,
+				E6B0024C306DF24C00397EFF /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6B00260306DF29700397EFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6B00267306DF29700397EFF /* UserNotificationsUI.framework in Frameworks */,
+				E6B00265306DF29700397EFF /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		E6B001EE306DF03A00397EFF = {
 			isa = PBXGroup;
 			children = (
+				E6B00279306DF4E800397EFF /* Shared */,
+				E6B00277306DF43C00397EFF /* LeanPawsWidgetExtension.entitlements */,
 				E6B001F9306DF03A00397EFF /* LeanPaws */,
 				E6B00207306DF03B00397EFF /* LeanPawsTests */,
 				E6B00211306DF03B00397EFF /* LeanPawsUITests */,
+				E6B0024F306DF24C00397EFF /* LeanPawsWidget */,
+				E6B00268306DF29700397EFF /* LeanPawsNotification */,
+				E6B0024A306DF24C00397EFF /* Frameworks */,
 				E6B001F8306DF03A00397EFF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,8 +194,21 @@
 				E6B001F7306DF03A00397EFF /* LeanPaws.app */,
 				E6B00204306DF03B00397EFF /* LeanPawsTests.xctest */,
 				E6B0020E306DF03B00397EFF /* LeanPawsUITests.xctest */,
+				E6B00249306DF24C00397EFF /* LeanPawsWidgetExtension.appex */,
+				E6B00263306DF29700397EFF /* LeanPawsNotification.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E6B0024A306DF24C00397EFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6B0024B306DF24C00397EFF /* WidgetKit.framework */,
+				E6B0024D306DF24C00397EFF /* SwiftUI.framework */,
+				E6B00264306DF29700397EFF /* UserNotifications.framework */,
+				E6B00266306DF29700397EFF /* UserNotificationsUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,13 +221,17 @@
 				E6B001F3306DF03A00397EFF /* Sources */,
 				E6B001F4306DF03A00397EFF /* Frameworks */,
 				E6B001F5306DF03A00397EFF /* Resources */,
+				E6B0025A306DF24D00397EFF /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E6B00258306DF24D00397EFF /* PBXTargetDependency */,
+				E6B00270306DF29700397EFF /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				E6B001F9306DF03A00397EFF /* LeanPaws */,
+				E6B00279306DF4E800397EFF /* Shared */,
 			);
 			name = LeanPaws;
 			packageProductDependencies = (
@@ -163,6 +286,52 @@
 			productReference = E6B0020E306DF03B00397EFF /* LeanPawsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		E6B00248306DF24C00397EFF /* LeanPawsWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6B0025E306DF24D00397EFF /* Build configuration list for PBXNativeTarget "LeanPawsWidgetExtension" */;
+			buildPhases = (
+				E6B00245306DF24C00397EFF /* Sources */,
+				E6B00246306DF24C00397EFF /* Frameworks */,
+				E6B00247306DF24C00397EFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				E6B0024F306DF24C00397EFF /* LeanPawsWidget */,
+				E6B00279306DF4E800397EFF /* Shared */,
+			);
+			name = LeanPawsWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = LeanPawsWidgetExtension;
+			productReference = E6B00249306DF24C00397EFF /* LeanPawsWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		E6B00262306DF29700397EFF /* LeanPawsNotification */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6B00273306DF29700397EFF /* Build configuration list for PBXNativeTarget "LeanPawsNotification" */;
+			buildPhases = (
+				E6B0025F306DF29700397EFF /* Sources */,
+				E6B00260306DF29700397EFF /* Frameworks */,
+				E6B00261306DF29700397EFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				E6B00268306DF29700397EFF /* LeanPawsNotification */,
+				E6B00279306DF4E800397EFF /* Shared */,
+			);
+			name = LeanPawsNotification;
+			packageProductDependencies = (
+			);
+			productName = LeanPawsNotification;
+			productReference = E6B00263306DF29700397EFF /* LeanPawsNotification.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +353,12 @@
 						CreatedOnToolsVersion = 26.4;
 						TestTargetID = E6B001F6306DF03A00397EFF;
 					};
+					E6B00248306DF24C00397EFF = {
+						CreatedOnToolsVersion = 26.4;
+					};
+					E6B00262306DF29700397EFF = {
+						CreatedOnToolsVersion = 26.4;
+					};
 				};
 			};
 			buildConfigurationList = E6B001F2306DF03A00397EFF /* Build configuration list for PBXProject "LeanPaws" */;
@@ -203,6 +378,8 @@
 				E6B001F6306DF03A00397EFF /* LeanPaws */,
 				E6B00203306DF03B00397EFF /* LeanPawsTests */,
 				E6B0020D306DF03B00397EFF /* LeanPawsUITests */,
+				E6B00248306DF24C00397EFF /* LeanPawsWidgetExtension */,
+				E6B00262306DF29700397EFF /* LeanPawsNotification */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +400,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E6B0020C306DF03B00397EFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6B00247306DF24C00397EFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6B00261306DF29700397EFF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +444,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E6B00245306DF24C00397EFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6B0025F306DF29700397EFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +470,16 @@
 			isa = PBXTargetDependency;
 			target = E6B001F6306DF03A00397EFF /* LeanPaws */;
 			targetProxy = E6B0020F306DF03B00397EFF /* PBXContainerItemProxy */;
+		};
+		E6B00258306DF24D00397EFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6B00248306DF24C00397EFF /* LeanPawsWidgetExtension */;
+			targetProxy = E6B00257306DF24D00397EFF /* PBXContainerItemProxy */;
+		};
+		E6B00270306DF29700397EFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6B00262306DF29700397EFF /* LeanPawsNotification */;
+			targetProxy = E6B0026F306DF29700397EFF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -393,8 +608,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LeanPaws/LeanPaws.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4FFH22F476;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -424,8 +641,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LeanPaws/LeanPaws.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4FFH22F476;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -530,6 +749,126 @@
 			};
 			name = Release;
 		};
+		E6B0025B306DF24D00397EFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = LeanPawsWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4FFH22F476;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LeanPawsWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LeanPawsWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Brandon.LeanPaws.LeanPawsWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E6B0025C306DF24D00397EFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = LeanPawsWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4FFH22F476;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LeanPawsWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LeanPawsWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Brandon.LeanPaws.LeanPawsWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E6B00274306DF29700397EFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = LeanPawsNotification/LeanPawsNotification.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4FFH22F476;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LeanPawsNotification/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LeanPawsNotification;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Brandon.LeanPaws.LeanPawsNotification;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E6B00275306DF29700397EFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = LeanPawsNotification/LeanPawsNotification.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4FFH22F476;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LeanPawsNotification/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LeanPawsNotification;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Brandon.LeanPaws.LeanPawsNotification;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -565,6 +904,24 @@
 			buildConfigurations = (
 				E6B0021F306DF03B00397EFF /* Debug */,
 				E6B00220306DF03B00397EFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6B0025E306DF24D00397EFF /* Build configuration list for PBXNativeTarget "LeanPawsWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6B0025B306DF24D00397EFF /* Debug */,
+				E6B0025C306DF24D00397EFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6B00273306DF29700397EFF /* Build configuration list for PBXNativeTarget "LeanPawsNotification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6B00274306DF29700397EFF /* Debug */,
+				E6B00275306DF29700397EFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
