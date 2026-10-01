@@ -72,7 +72,7 @@
 		E6B00264306DF29700397EFF /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		E6B00266306DF29700397EFF /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
 		E6B00277306DF43C00397EFF /* LeanPawsWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LeanPawsWidgetExtension.entitlements; sourceTree = "<group>"; };
-		E6D20F50306E732500EE62CA /* LeanPaws.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; path = LeanPaws.xctestplan; sourceTree = "<group>"; };
+		E6D20F50306E732500EE62CA /* LeanPaws.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = LeanPaws.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
