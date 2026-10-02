@@ -7,9 +7,17 @@
 
 import CoreData
 
-/// Problems that can only happen at the database level
-enum CoreDataRepositoryError: Error {
+/// Problems that can only happen at the database level, worded for the owner
+enum CoreDataRepositoryError: Error, LocalizedError {
     case dogRecordMissing
+
+    var errorDescription: String? {
+        "We couldn't find your dog's saved details."
+    }
+
+    var recoverySuggestion: String? {
+        "Close and reopen LeanPaws. If it keeps happening, set up your dog again."
+    }
 }
 
 /// Saves and reads dogs and their vet plans using Core Data in the shared App Group store
