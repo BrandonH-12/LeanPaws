@@ -72,6 +72,7 @@
 		E6B00264306DF29700397EFF /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		E6B00266306DF29700397EFF /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
 		E6B00277306DF43C00397EFF /* LeanPawsWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LeanPawsWidgetExtension.entitlements; sourceTree = "<group>"; };
+		E6D20F50306E732500EE62CA /* LeanPaws.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = LeanPaws.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -176,6 +177,7 @@
 		E6B001EE306DF03A00397EFF = {
 			isa = PBXGroup;
 			children = (
+				E6D20F50306E732500EE62CA /* LeanPaws.xctestplan */,
 				E6B00279306DF4E800397EFF /* Shared */,
 				E6B00277306DF43C00397EFF /* LeanPawsWidgetExtension.entitlements */,
 				E6B001F9306DF03A00397EFF /* LeanPaws */,
@@ -347,6 +349,7 @@
 					};
 					E6B00203306DF03B00397EFF = {
 						CreatedOnToolsVersion = 26.4;
+						LastSwiftMigration = 2640;
 						TestTargetID = E6B001F6306DF03A00397EFF;
 					};
 					E6B0020D306DF03B00397EFF = {
@@ -673,6 +676,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -683,6 +687,7 @@
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -694,6 +699,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

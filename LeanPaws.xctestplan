@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "25DD69E3-F70A-4973-BD41-148BCA2336AF",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:LeanPaws.xcodeproj",
+        "identifier" : "E6B00203306DF03B00397EFF",
+        "name" : "LeanPawsTests"
+      }
+    }
+  ],
+  "version" : 1
+}
