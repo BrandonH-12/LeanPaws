@@ -5,6 +5,10 @@
         <attribute name="dateOfBirth" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" attributeType="String"/>
+        <relationship name="foodEntries" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="FoodEntryEntity" inverseName="dog" inverseEntity="FoodEntryEntity"/>
+        <relationship name="plan" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="WeightPlanEntity" inverseName="dog" inverseEntity="WeightPlanEntity"/>
+        <relationship name="walkEntries" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="WalkEntryEntity" inverseName="dog" inverseEntity="WalkEntryEntity"/>
+        <relationship name="weighIns" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="WeighInEntity" inverseName="dog" inverseEntity="WeighInEntity"/>
     </entity>
     <entity name="FoodEntryEntity" representedClassName="FoodEntryEntity" syncable="YES" codeGenerationType="class">
         <attribute name="eatenAt" attributeType="Date" usesScalarValueType="NO"/>
@@ -12,16 +16,19 @@
         <attribute name="grams" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" attributeType="String"/>
+        <relationship name="dog" maxCount="1" deletionRule="Nullify" destinationEntity="DogEntity" inverseName="foodEntries" inverseEntity="DogEntity"/>
     </entity>
     <entity name="WalkEntryEntity" representedClassName="WalkEntryEntity" syncable="YES" codeGenerationType="class">
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="walkDurationMinutes" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="walkedAt" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="dog" maxCount="1" deletionRule="Nullify" destinationEntity="DogEntity" inverseName="walkEntries" inverseEntity="DogEntity"/>
     </entity>
     <entity name="WeighInEntity" representedClassName="WeighInEntity" syncable="YES" codeGenerationType="class">
         <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="weighInDate" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="weightKg" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="dog" maxCount="1" deletionRule="Nullify" destinationEntity="DogEntity" inverseName="weighIns" inverseEntity="DogEntity"/>
     </entity>
     <entity name="WeightPlanEntity" representedClassName="WeightPlanEntity" syncable="YES" codeGenerationType="class">
         <attribute name="dailyFoodAllowanceGrams" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
@@ -31,5 +38,6 @@
         <attribute name="startDate" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="startWeightKg" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="targetWeightKg" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="dog" maxCount="1" deletionRule="Nullify" destinationEntity="DogEntity" inverseName="plan" inverseEntity="DogEntity"/>
     </entity>
 </model>
