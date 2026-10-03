@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import WidgetKit
 
 #if DEBUG
 /// Fills an empty database with one example dog so the widget can be tested before the screens exist.
@@ -33,6 +34,8 @@ enum DebugSampleData {
 
             _ = try LogWalkUseCase(dogProfileRepository: dogProfiles, activityLogRepository: activityLog)
                 .logWalk(forDogID: max.id, durationMinutes: 25)
+            // Tell the widget the data changed so it refreshes straight away
+            WidgetCenter.shared.reloadAllTimelines()
         } catch {
             print("Couldn't add sample data: \(error)")
         }
