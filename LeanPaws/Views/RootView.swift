@@ -22,8 +22,8 @@ struct RootView: View {
             switch viewModel.destination {
             case .loading:
                 ProgressView()
-            case .planSetup:
-                Text("Plan setup goes here")    // replaced by the real screen next
+            case .planSetup(let existingDogID):
+                PlanSetupView(viewModel: PlanSetupViewModel(existingDogID: existingDogID, container: container), onPlanSaved: {viewModel.refresh()})
             case .today:
                 Text("Today goes here")         // replaced by the real screen after that
             }
