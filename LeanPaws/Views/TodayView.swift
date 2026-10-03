@@ -60,7 +60,7 @@ struct TodayView: View {
 
                 // The owner's next actions
                 Section {
-                    NavigationLink("Log food") { Text("Log food goes here") }
+                    NavigationLink("Log food") { LogFoodView(viewModel: LogFoodViewModel(dogID: viewModel.dogID, container: viewModel.container)) }
                     NavigationLink("Log a walk") { Text("Log walk goes here") }
                     NavigationLink("Weight progress") { Text("Weight progress goes here") }
                 }
