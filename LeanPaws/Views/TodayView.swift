@@ -62,7 +62,7 @@ struct TodayView: View {
                 Section {
                     NavigationLink("Log food") { LogFoodView(viewModel: LogFoodViewModel(dogID: viewModel.dogID, container: viewModel.container)) }
                     NavigationLink("Log a walk") { LogWalkView(viewModel: LogWalkViewModel(dogID: viewModel.dogID, container: viewModel.container)) }
-                    NavigationLink("Weight progress") { Text("Weight progress goes here") }
+                    NavigationLink("Weight progress") { WeightProgressView(viewModel: WeightProgressViewModel(dogID: viewModel.dogID, container: viewModel.container)) }
                 }
             }
             .navigationTitle(viewModel.progress.map { "\($0.dogName)'s day" } ?? "Today")
