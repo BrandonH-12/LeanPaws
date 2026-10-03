@@ -24,8 +24,8 @@ struct RootView: View {
                 ProgressView()
             case .planSetup(let existingDogID):
                 PlanSetupView(viewModel: PlanSetupViewModel(existingDogID: existingDogID, container: container), onPlanSaved: {viewModel.refresh()})
-            case .today:
-                Text("Today goes here")         // replaced by the real screen after that
+            case .today(let dogID):
+                TodayView(viewModel: TodayViewModel(dogID: dogID, container: container))    
             }
         }
         .task { viewModel.refresh() }
