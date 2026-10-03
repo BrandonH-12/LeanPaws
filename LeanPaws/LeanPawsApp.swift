@@ -16,7 +16,7 @@ struct LeanPawsApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView(container: .live)
         }
     }
 }
