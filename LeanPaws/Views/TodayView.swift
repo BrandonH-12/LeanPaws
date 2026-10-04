@@ -64,9 +64,17 @@ struct TodayView: View {
                     NavigationLink("Log a walk") { LogWalkView(viewModel: LogWalkViewModel(dogID: viewModel.dogID, container: viewModel.container)) }
                     NavigationLink("Weight progress") { WeightProgressView(viewModel: WeightProgressViewModel(dogID: viewModel.dogID, container: viewModel.container)) }
                 }
+                #if DEBUG
+                Section("Testing"){
+                    Button("Send Test in 5 Seconds") {
+                        Task{ await CheckInNotifications.sendTestCheckIn(dogName: viewModel.progress?.dogName ?? "your dog")}
+                    }
+                }
+                #endif
             }
             .navigationTitle(viewModel.progress.map { "\($0.dogName)'s day" } ?? "Today")
             .onAppear { viewModel.loadTodaysProgress() }   // also refreshes after coming back from logging
+            .task { await viewModel.setUpEveningCheckIn() }
         }
     }
 }
