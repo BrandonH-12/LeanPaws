@@ -32,4 +32,10 @@ final class TodayViewModel {
             errorMessage = error.ownerFacingMessage
         }
     }
+    
+    // Asks for notification permission once the owner has a plan, then schedules the evening check-in
+    func setUpEveningCheckIn() async {
+        guard let dogName = progress?.dogName else { return }
+        await CheckInNotifications.requestPermissionAndSchedule(dogName: dogName)
+    }
 }

@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct LeanPawsApp: App {
     init() {
+        CheckInNotifications.registerCategory()
         #if DEBUG
         DebugSampleData.addIfEmpty()
         #endif
