@@ -12,7 +12,9 @@ struct LeanPawsApp: App {
     init() {
         CheckInNotifications.registerCategory()
         #if DEBUG
-        DebugSampleData.addIfEmpty()
+        if ProcessInfo.processInfo.arguments.contains("-seedSampleData"){
+            DebugSampleData.addIfEmpty()
+        }
         #endif
     }
     var body: some Scene {
