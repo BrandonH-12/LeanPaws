@@ -11,14 +11,16 @@ import UserNotifications
 /// Sets up the evening check-in that shows the owner how their dog's day is going
 enum CheckInNotifications {
     static let categoryID = "DAILY_CHECK_IN"            // the notification extension listens for this
-    static let logWalkActionID = "LOG_20_MIN_WALK"
+    static let logWalkActionID = "LOG_WALK"
     private static let dailyCheckInID = "daily-check-in"
 
-    /// Tells iOS about the check-in's "Log a 20-min walk" button
+    /// Tells iOS about the check-in's "Log a walk" action, where the owner types the minutes walked
     static func registerCategory() {
-        let logWalk = UNNotificationAction(identifier: logWalkActionID,
-                                           title: "Log a 20-min walk",
-                                           options: [])
+        let logWalk = UNTextInputNotificationAction(identifier: logWalkActionID,
+                                            title: "Log a walk",
+                                            options: [],
+                                            textInputButtonTitle: "Log",
+                                            textInputPlaceholder: "Minutes walked, e.g. 25")
         let checkIn = UNNotificationCategory(identifier: categoryID,
                                              actions: [logWalk],
                                              intentIdentifiers: [],

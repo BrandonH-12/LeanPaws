@@ -11,7 +11,7 @@ import UserNotifications
 import UserNotificationsUI
 import WidgetKit
 
-/// Shows today's progress inside the evening check-in and handles its "Log a 20-min walk" button
+/// Shows today's progress inside the evening check-in and lets the owner log a walk by typing the minutes
 class NotificationViewController: UIViewController, UNNotificationContentExtension {
     // Comes from the template's storyboard; kept (and hidden) so the storyboard still loads
     @IBOutlet var label: UILabel?
@@ -31,11 +31,20 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
         showTodaysProgress(message: nil)
     }
 
-    // Called when the owner taps "Log a 20-min walk"
+    // Called when the owner types how long they walked and taps "Log"
     func didReceive(_ response: UNNotificationResponse,
                     completionHandler completion: @escaping (UNNotificationContentExtensionResponseOption) -> Void) {
-        guard response.actionIdentifier == CheckInNotifications.logWalkActionID else {
+        guard response.actionIdentifier == CheckInNotifications.logWalkActionID,
+              let typedResponse = response as? UNTextInputNotificationResponse else {
             completion(.dismissAndForwardAction)
+            return
+        }
+
+        // The owner types the minutes, so check it's a whole number first
+        let typedMinutes = typedResponse.userText.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard let minutes = Int(typedMinutes) else {
+            showTodaysProgress(message: "Enter the walk length in minutes as a whole number, for example 25.")
+            completion(.doNotDismiss)
             return
         }
 
@@ -44,11 +53,11 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
                 completion(.dismiss)
                 return
             }
-            // Same use case and rules as the Log walk screen
+            // Same use case and rules as the Log walk screen (plan exists, at least 1 minute, not in the future)
             _ = try LogWalkUseCase(dogProfileRepository: dogProfiles, activityLogRepository: activityLog)
-                .logWalk(forDogID: dog.id, durationMinutes: 20)
+                .logWalk(forDogID: dog.id, durationMinutes: minutes)
             WidgetCenter.shared.reloadAllTimelines()
-            showTodaysProgress(message: "20-minute walk logged.")
+            showTodaysProgress(message: "\(minutes)-minute walk logged.")
         } catch {
             showTodaysProgress(message: error.ownerFacingMessage)
         }
