@@ -95,6 +95,14 @@ Enabled on the **LeanPaws**, **LeanPawsWidgetExtension** and **LeanPawsNotificat
 3. Select the **LeanPaws** scheme and an iPhone Simulator, then **Run** (⌘R).
 4. A new install starts on **Set up the vet's plan**. Enter a dog and plan to begin.
 
+**Optional: start with example data.** In **Product › Scheme › Edit Scheme › Run › Arguments**, tick `-seedSampleData`. Delete the app from the Simulator and run again to load an example dog ("Max") with a plan, meals and a walk for today.
+
+**Trying the extensions:**
+- **Widget:** long-press the Home Screen › Edit › Add Widget › LeanPaws. For the Lock Screen widget, enable Features › Face ID › Enrolled, lock (⌘L), wake (⇧⌘H), long-press › Customize › Lock Screen.
+- **Check-in notification:** allow notifications when prompted on the Today screen. Tap **Send a test check-in notification in 5 seconds** (Debug builds only), go to the Home Screen (⇧⌘H), then long-press the notification and use **Log a walk**.
+
+**Running tests:** select the LeanPaws scheme and press ⌘U.
+
 ### Using the app (first run)
 1. **Set up the vet's plan:** enter your dog's name, breed and date of birth, then the vet's targets (current and goal weight, daily food allowance including treats, daily walking goal). Tap **Save plan**.
 2. **Today:** shows food eaten and minutes walked against the targets.
@@ -107,14 +115,6 @@ Enabled on the **LeanPaws**, **LeanPawsWidgetExtension** and **LeanPawsNotificat
 - **"Application failed preflight checks" on first launch:** usually caused by a previous install on the same Simulator. Quit and reopen the Simulator, or erase it, then run again.
 - **Widget or Today shows zero the next day:** expected. Progress is tracked per day and resets at midnight.
 - **Signing or App Group errors:** select your own Team for all three targets under **Signing & Capabilities**. If needed, change the App Group to one your team can use, and update `PersistenceController.appGroupID` to match.
-
-**Optional: start with example data.** In **Product › Scheme › Edit Scheme › Run › Arguments**, tick `-seedSampleData`. Delete the app from the Simulator and run again to load an example dog ("Max") with a plan, meals and a walk for today.
-
-**Trying the extensions:**
-- **Widget:** long-press the Home Screen › Edit › Add Widget › LeanPaws. For the Lock Screen widget, enable Features › Face ID › Enrolled, lock (⌘L), wake (⇧⌘H), long-press › Customize › Lock Screen.
-- **Check-in notification:** allow notifications when prompted on the Today screen. Tap **Send a test check-in notification in 5 seconds** (Debug builds only), go to the Home Screen (⇧⌘H), then long-press the notification and use **Log a walk**.
-
-**Running tests:** select the LeanPaws scheme and press ⌘U.
 
 ---
 
@@ -136,7 +136,7 @@ Enabled on the **LeanPaws**, **LeanPawsWidgetExtension** and **LeanPawsNotificat
 
 - One owner and one dog per device; household sharing would need CloudKit.
 - One editable plan per dog; a revision history to revisit earlier plans was designed but left out for time.
-- The check-in is fixed at 7pm. iOS notifications must be scheduled ahead, so the app can't fire a reminder the moment walking falls behind. Letting owners choose the time, or skipping reminders on days the target is met, is future work.
+- The check-in is scheduled for 7pm, when there is still time for an evening walk. Letting owners choose the time, or skipping reminders on days the target is met, is future work.
 
 ---
 
