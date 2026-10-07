@@ -99,7 +99,7 @@ Enabled on the **LeanPaws**, **LeanPawsWidgetExtension** and **LeanPawsNotificat
 
 **Trying the extensions:**
 - **Widget:** long-press the Home Screen › Edit › Add Widget › LeanPaws. For the Lock Screen widget, enable Features › Face ID › Enrolled, lock (⌘L), wake (⇧⌘H), long-press › Customize › Lock Screen.
-- **Check-in notification:** allow notifications when prompted on the Today screen. Tap **Send Test in 5 Seconds** (Debug builds only), go to the Home Screen (⇧⌘H), then long-press the notification and use **Log a walk**.
+- **Check-in notification:** allow notifications when prompted on the Today screen. Tap **Send a test check-in notification in 5 seconds** (Debug builds only), go to the Home Screen (⇧⌘H), then long-press the notification and use **Log a walk**.
 
 **Running tests:** select the LeanPaws scheme and press ⌘U.
 
@@ -129,6 +129,21 @@ Enabled on the **LeanPaws**, **LeanPawsWidgetExtension** and **LeanPawsNotificat
 
 ## Attribution
 
-- **Apple documentation and sample code:** WidgetKit (*Creating a widget extension*, *Keeping a widget up to date*), User Notifications (*Declaring your actionable notification types*, *Customizing the appearance of notifications*), Core Data (*Setting up a Core Data stack*), Xcode (*Configuring app groups*), Swift Charts and Swift Testing documentation.
+- **Apple documentation:**
+  - [Creating a widget extension](https://developer.apple.com/documentation/widgetkit/creating-a-widget-extension)
+  - [Keeping a widget up to date](https://developer.apple.com/documentation/widgetkit/keeping-a-widget-up-to-date)
+  - [Creating accessory widgets](https://developer.apple.com/documentation/widgetkit/creating-accessory-widgets-and-watch-complications)
+  - [WidgetCenter](https://developer.apple.com/documentation/widgetkit/widgetcenter)
+  - [Declaring your actionable notification types](https://developer.apple.com/documentation/usernotifications/declaring-your-actionable-notification-types)
+  - [Customizing the appearance of notifications](https://developer.apple.com/documentation/usernotificationsui/customizing-the-appearance-of-notifications)
+  - [UNNotificationContentExtension](https://developer.apple.com/documentation/usernotificationsui/unnotificationcontentextension)
+  - [UNTextInputNotificationAction](https://developer.apple.com/documentation/usernotifications/untextinputnotificationaction)
+  - [Setting up a Core Data stack](https://developer.apple.com/documentation/coredata/setting-up-a-core-data-stack)
+  - [NSPredicate](https://developer.apple.com/documentation/foundation/nspredicate)
+  - [Configuring app groups](https://developer.apple.com/documentation/xcode/configuring-app-groups)
+  - [Observation](https://developer.apple.com/documentation/observation)
+  - [Swift Charts](https://developer.apple.com/documentation/charts)
+  - [Swift Testing](https://developer.apple.com/documentation/testing)
+  
 - **AI assistance:** Claude (Anthropic) was used for planning, checking the design against the assessment specification, Xcode and Git setup guidance, code scaffolds that I completed, and larger code drafts (Core Data repositories, screens, widget, notification extension) that I reviewed, tested and adjusted, as well as a first draft of the architecture diagram. Full details are in Section 4 of the Required Document.
 - **Third-party libraries:** none. Only Apple frameworks are used.
