@@ -62,6 +62,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E67B89E93075D7080062D6DE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E6B001F7306DF03A00397EFF /* LeanPaws.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeanPaws.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6B00204306DF03B00397EFF /* LeanPawsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeanPawsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6B0020E306DF03B00397EFF /* LeanPawsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeanPawsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,6 +178,7 @@
 		E6B001EE306DF03A00397EFF = {
 			isa = PBXGroup;
 			children = (
+				E67B89E93075D7080062D6DE /* README.md */,
 				E6D20F50306E732500EE62CA /* LeanPaws.xctestplan */,
 				E6B00279306DF4E800397EFF /* Shared */,
 				E6B00277306DF43C00397EFF /* LeanPawsWidgetExtension.entitlements */,
