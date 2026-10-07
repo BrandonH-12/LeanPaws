@@ -25,6 +25,9 @@ struct WeightProgressView: View {
                 if let toGo = viewModel.kilogramsToGo {
                     LabeledContent("Still to lose", value: toGo == 0 ? "Goal reached" : kilograms(toGo))
                 }
+                if let nextVetCheck = viewModel.nextVetCheck {
+                    LabeledContent("Next vet check", value: nextVetCheck.formatted(date: .abbreviated, time: .omitted))
+                }
             }
 
             // The trend line the owner can show the vet

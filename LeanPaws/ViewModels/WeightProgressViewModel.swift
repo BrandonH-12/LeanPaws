@@ -16,6 +16,7 @@ final class WeightProgressViewModel {
     private(set) var weighIns: [WeighIn] = []
     private(set) var startWeightKg: Double?
     private(set) var targetWeightKg: Double?
+    private(set) var nextVetCheck: Date?
     private(set) var errorMessage: String?
     private(set) var confirmationMessage: String?
 
@@ -45,6 +46,7 @@ final class WeightProgressViewModel {
             let plan = try container.dogProfileRepository.fetchPlan(forDogID: dogID)
             startWeightKg = plan?.startWeightKg
             targetWeightKg = plan?.targetWeightKg
+            nextVetCheck = plan?.nextVetCheck
         } catch {
             errorMessage = error.ownerFacingMessage
         }

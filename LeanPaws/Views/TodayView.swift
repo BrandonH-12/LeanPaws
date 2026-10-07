@@ -65,8 +65,8 @@ struct TodayView: View {
                     NavigationLink("Weight progress") { WeightProgressView(viewModel: WeightProgressViewModel(dogID: viewModel.dogID, container: viewModel.container)) }
                 }
                 #if DEBUG
-                Section("Testing"){
-                    Button("Send Test in 5 Seconds") {
+                Section("Try the evening check-in"){
+                    Button("Send a test check-in notification in 5 seconds") {
                         Task{ await CheckInNotifications.sendTestCheckIn(dogName: viewModel.progress?.dogName ?? "your dog")}
                     }
                 }
