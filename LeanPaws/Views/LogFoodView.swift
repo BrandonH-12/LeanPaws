@@ -15,7 +15,7 @@ struct LogFoodView: View {
     var body: some View {
         Form {
             Section {
-                Picker("Type", selection: $viewModel.foodType) {
+                Picker("Meal or treat?", selection: $viewModel.foodType) {
                     ForEach(FoodType.allCases, id: \.self) { type in
                         Text(type.displayName).tag(type)
                     }
