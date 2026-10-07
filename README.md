@@ -92,7 +92,7 @@ Enabled on the **LeanPaws**, **LeanPawsWidgetExtension** and **LeanPawsNotificat
 
 1. Clone the repository and open `LeanPaws.xcodeproj`.
 2. For each of the three targets, open **Signing & Capabilities** and select your own Team (a free Personal Team works in the Simulator). If needed, change the App Group to one available to your team and update `PersistenceController.appGroupID` to match.
-3. Select the **LeanPaws** scheme and an iPhone Simulator, then **Run** (⌘R).
+3. Select the LeanPaws scheme and an iPhone Simulator, then Run (⌘R). For a clean first run, use a Simulator that hasn't run LeanPaws before, or choose Device › Erase All Content and Settings first.
 4. A new install starts on **Set up the vet's plan**. Enter a dog and plan to begin.
 
 **Optional: start with example data.** In **Product › Scheme › Edit Scheme › Run › Arguments**, tick `-seedSampleData`. Delete the app from the Simulator and run again to load an example dog ("Max") with a plan, meals and a walk for today.
