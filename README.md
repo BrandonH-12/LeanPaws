@@ -95,6 +95,19 @@ Enabled on the **LeanPaws**, **LeanPawsWidgetExtension** and **LeanPawsNotificat
 3. Select the **LeanPaws** scheme and an iPhone Simulator, then **Run** (⌘R).
 4. A new install starts on **Set up the vet's plan**. Enter a dog and plan to begin.
 
+### Using the app (first run)
+1. **Set up the vet's plan:** enter your dog's name, breed and date of birth, then the vet's targets (current and goal weight, daily food allowance including treats, daily walking goal). Tap **Save plan**.
+2. **Today:** shows food eaten and minutes walked against the targets.
+3. **Log food / Log a walk:** record a meal, treat or walk; Today and the widget update straight away.
+4. **Weight progress:** record one weigh-in per day and see the trend against the vet's goal.
+5. **Evening check-in:** allow notifications when asked. In Debug builds, tap **Send a test check-in notification in 5 seconds** on Today, go to the Home Screen (⇧⌘H), then long-press the notification to see today's progress and type minutes into **Log a walk**.
+
+### Troubleshooting
+- **App opens on Today with an old dog, or a widget is already on the Home Screen:** the Simulator still has data from a previous install. Use **Device › Erase All Content and Settings** (or delete the app) and run again.
+- **"Application failed preflight checks" on first launch:** usually caused by a previous install on the same Simulator. Quit and reopen the Simulator, or erase it, then run again.
+- **Widget or Today shows zero the next day:** expected. Progress is tracked per day and resets at midnight.
+- **Signing or App Group errors:** select your own Team for all three targets under **Signing & Capabilities**. If needed, change the App Group to one your team can use, and update `PersistenceController.appGroupID` to match.
+
 **Optional: start with example data.** In **Product › Scheme › Edit Scheme › Run › Arguments**, tick `-seedSampleData`. Delete the app from the Simulator and run again to load an example dog ("Max") with a plan, meals and a walk for today.
 
 **Trying the extensions:**
