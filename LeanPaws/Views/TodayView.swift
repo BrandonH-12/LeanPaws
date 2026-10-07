@@ -10,6 +10,7 @@ import SwiftUI
 /// The owner's daily dashboard: food and walking progress against the vet's plan
 struct TodayView: View {
     @State var viewModel: TodayViewModel
+    @Environment(\.scenePhase) private var scenePhase
 
     var body: some View {
         NavigationStack {
@@ -74,6 +75,11 @@ struct TodayView: View {
             }
             .navigationTitle(viewModel.progress.map { "\($0.dogName)'s day" } ?? "Today")
             .onAppear { viewModel.loadTodaysProgress() }   // also refreshes after coming back from logging
+            .onChange(of: scenePhase) { _, newPhase in
+                            if newPhase == .active {
+                                viewModel.loadTodaysProgress()
+                            }
+                        }
             .task { await viewModel.setUpEveningCheckIn() }
         }
     }
